@@ -27,6 +27,149 @@ Implementation details will be maintained in a separate repository.
 
 ## System Requirements
 
+### System Features and & API Endpoints
+
+#### F01-Restaurant Browsing
+
+##### Functions
+
+- View all restaurants
+- view all categories / restarant categories
+- View restaurant menu
+- View restaurant reviews
+- View item reviews
+- View recommended restaurants
+- View top rated restaurants
+- View top rated items
+- Search restaurants (Filters)
+- Search menu items (Filters)
+
+#### F02-User Registration & Authentication
+
+##### Functions
+
+- Sign up
+- Forget Password
+- Email verfication
+- OTP verfication
+- User / Customer profile
+- Logout
+
+#### F03-Cart Management
+
+##### Functions
+
+- Add to cart
+- Remove cart item
+- View cart
+- Clear cart
+- Update item quantity
+
+#### F04-Order Management
+
+##### Functions
+
+- Cancel Order by (Customer / Resturant)
+- Track order status (customer)
+- Update Order status (Restaurant)
+- Place Order
+
+> **Note**: Order statuses after checkout are: **Pinding**, **In Progress**, **On the way**, **Delivered**.
+
+##### Constraints
+
+- Customer can't modify or delete items after **Pending** status.
+- Customer can't cancel order after **Pending** status.
+- Only authenticated customers can place orders.
+- Customer should be notified on order placement, status updated
+- Customer must only be able to place order if he
+  - Entered or selected detailed delivery address
+  - Selected payment method
+    - if the method is not cash on delivery then the payment should be confirmed first
+  - Entered or selected his phone number
+
+#### F05-Customer Profile Management
+
+##### Functions
+
+- Update profile information
+- Prefered Payment method
+- Address management (Multiple addresses)
+  - Add address
+  - Update address
+  - Delete address
+- Deactivate account
+- Rate order (Restaurant / Item)
+- View order history
+- Change password
+- Change email address
+- Enable or Disable account
+
+##### Constraints
+
+- Customer should provide his old password in order to change the password
+- Customer should provide his password in order disable his account
+
+#### F06-Payment Integration
+
+##### Functions
+
+- Payment integration with 3rd party
+- Multiple payment methods
+- View payment transactions
+
+#### F07-Restaurant & Menu & Categories Management
+
+##### Functions
+
+- Add restarant
+- Update restaurant
+- Enable / Disable
+- Add restaurant category
+- Update restaurant category
+- Delete restaurant category
+- Add restaurant menu
+- Update menu
+- Delete menu
+- Add menu category
+- Update menu category
+- Delete menu category
+- View menu history
+- Search for restaurant, restaurant category, menu, menu category
+
+#### F08-Restaurant Dashboard
+
+##### Functions
+
+- Daily order count
+- Daily delivered order count
+- Daily undelivered order count
+- Total order count
+- Daily cancelled order count
+- Total cancelled order count
+- Daily amount of transactions
+- Total amount of transactions
+- Daily transaction report
+- Monthly transaction report
+
+#### F08-Restaurant Dashboard
+
+##### Functions
+
+- Count restaurants
+- Count customers
+- count active customers
+- Daily order count
+- Total order count
+- Daily cancelled order count
+- Total cancelled orders
+- Daily amount of transactions
+- Total amount of transactions
+- Daily tranasaction report
+- Monthly transaction report
+
+---
+
 ## Technology Stack (Planned)
 
 - **Backend:** Java, Spring, Git.
