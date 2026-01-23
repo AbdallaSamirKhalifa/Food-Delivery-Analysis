@@ -19,12 +19,6 @@ This document focuses on system analysis and high-level design.
 Implementation details are intentionally excluded.
 Implementation details will be maintained in a separate repository.
 
-## Data Model
-
-> Not Implemented Yet.
-
-- The data layer will be designed with a focus on: **Data Integrity**, **Data Consistency**, **Normalization**, **Denormalization**, **Indexing**, **Performance Tuning**.
-
 ## System Requirements
 
 ### System Features and & API Endpoints
@@ -152,7 +146,7 @@ Implementation details will be maintained in a separate repository.
 - Daily transaction report
 - Monthly transaction report
 
-#### F08-Restaurant Dashboard
+#### F09-System Admin Dashboard
 
 ##### Functions
 
@@ -165,10 +159,24 @@ Implementation details will be maintained in a separate repository.
 - Total cancelled orders
 - Daily amount of transactions
 - Total amount of transactions
-- Daily tranasaction report
+- Daily transaction report
 - Monthly transaction report
 
 ---
+
+---
+
+## Data Model
+
+> The data layer will be designed with a focus on: **Data Integrity**, **Data Consistency**, **Normalization**, **Denormalization**, **Indexing**, **Performance Tuning**.
+
+### Initial DB - Schema
+
+<div align=center>
+
+![DB - Schema](Food_Delivery_Schema.png)
+
+</div>
 
 ## Technology Stack (Planned)
 
