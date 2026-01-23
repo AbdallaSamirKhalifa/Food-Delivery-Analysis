@@ -178,6 +178,44 @@ Implementation details will be maintained in a separate repository.
 
 </div>
 
+## Diagrams & Charts
+
+### Place Order
+
+#### Use Case
+
+- Actor: Customer
+- **Description**: Validates cart, payment, and profile data to create a formal order.
+- **Preconditions**: Cart is not empty. User is logged in.
+- **Main Flow**:
+  - User clicks "Checkout."
+  - System validates User Profile:
+  - Check: Is DeliveryAddress selected?
+  - Check: Is PhoneNumber verified?
+  - System locks the Cart (prevents modification).
+  - System calculates Final Total (Cart Total + Delivery Fee + Tax).
+  - User selects Payment Method (e.g., Credit Card).
+
+  - **Process Payment**: System communicates with Payment Gateway & receives "Success" token.
+  - System creates Order record with Status = Pending.
+  - System creates OrderItem records for each item in the cart.
+  - System clears the User's Cart.
+    - System sends notification to the Restaurant.
+
+- **Alternative Flows**:
+  - **Payment Failed**.
+    - Gateway returns "Declined."
+    - System returns error message indicating the transaction is declined.
+
+  - **Missing Address**.
+    - System returns error message indecating the address is missing.
+  - **Phone Is Not Verified**
+    - System returns error message indicating the phone is not verified.
+
+- **Constraints**:
+  - User cannot place an order if the Restaurant is Closed.
+  - Minimum Order Value (if defined by restaurant) must be met or small order fee is applied.
+
 ## Technology Stack (Planned)
 
 - **Backend:** Java, Spring, Git.
