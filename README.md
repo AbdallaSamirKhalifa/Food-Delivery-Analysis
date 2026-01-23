@@ -216,6 +216,14 @@ Implementation details will be maintained in a separate repository.
   - User cannot place an order if the Restaurant is Closed.
   - Minimum Order Value (if defined by restaurant) must be met or small order fee is applied.
 
+#### Flowchart
+
+<div align=center>
+
+![flowchart](Place_order_flowchart.png)
+
+</div>
+
 ## Technology Stack (Planned)
 
 - **Backend:** Java, Spring, Git.
