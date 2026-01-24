@@ -19,10 +19,10 @@ This document focuses on system analysis and high-level design.
 Implementation details are intentionally excluded.
 Implementation details will be maintained in a separate repository.
 
-<details>
-<summary>System Requirements</summary>
-
 ## System Requirements
+
+<details>
+<summary>System Features and & API Endpoints</summary>
 
 ### System Features and & API Endpoints
 
@@ -185,10 +185,10 @@ Implementation details will be maintained in a separate repository.
 
 ## Diagrams & Charts
 
+### Place Order
+
 <details>
 <summary>Place Order Use Case</summary>
-
-### Place Order
 
 #### Use Case
 
