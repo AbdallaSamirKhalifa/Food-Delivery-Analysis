@@ -19,6 +19,9 @@ This document focuses on system analysis and high-level design.
 Implementation details are intentionally excluded.
 Implementation details will be maintained in a separate repository.
 
+<details>
+<summary>System Requirements</summary>
+
 ## System Requirements
 
 ### System Features and & API Endpoints
@@ -166,6 +169,8 @@ Implementation details will be maintained in a separate repository.
 
 ---
 
+</details>
+
 ## Data Model
 
 > The data layer will be designed with a focus on: **Data Integrity**, **Data Consistency**, **Normalization**, **Denormalization**, **Indexing**, **Performance Tuning**.
@@ -179,6 +184,9 @@ Implementation details will be maintained in a separate repository.
 </div>
 
 ## Diagrams & Charts
+
+<details>
+<summary>Place Order Use Case</summary>
 
 ### Place Order
 
@@ -260,6 +268,8 @@ placeOrder(request){
 
 }
 ```
+
+</details>
 
 ## Technology Stack (Planned)
 
