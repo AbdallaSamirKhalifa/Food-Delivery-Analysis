@@ -224,6 +224,14 @@ Implementation details will be maintained in a separate repository.
 
 </div>
 
+#### Sequence Diagram
+
+<div align=center>
+
+![Sequence Diagram](Place_order_sequence_diagram.png)
+
+</div>
+
 ## Technology Stack (Planned)
 
 - **Backend:** Java, Spring, Git.
