@@ -232,6 +232,35 @@ Implementation details will be maintained in a separate repository.
 
 </div>
 
+#### Pseudocode
+
+```text
+placeOrder(request){
+  if(!isValidCustomer)
+    return 'Invalid customer. Please login before creating new Order'
+
+  if(!isAddressSelected)
+    return 'Please select address'
+
+  if(!isPhoneVerified)
+    if(!verifyPhoneWithOTP)
+      return 'Invalid phone number. Please enter valid one'
+
+  cartInfo= fetchCartInfo
+  total=calcOrderTotal
+
+  if(!isPaymentCOD)
+    if(!processPayment)
+      return 'Payment Declined'
+
+  saveOrder // DB Transaction creates order record with pending status
+  @async notifyRest
+
+  return 'Order placed successfully'
+
+}
+```
+
 ## Technology Stack (Planned)
 
 - **Backend:** Java, Spring, Git.
