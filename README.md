@@ -198,9 +198,9 @@ Implementation details will be maintained in a separate repository.
 - **Main Flow**:
   - User clicks "Checkout."
   - System validates User Profile:
+  - System locks the Cart (prevents modification).
   - Check: Is DeliveryAddress selected?
   - Check: Is PhoneNumber verified?
-  - System locks the Cart (prevents modification).
   - System calculates Final Total (Cart Total + Delivery Fee + Tax).
   - User selects Payment Method (e.g., Credit Card).
 
@@ -246,6 +246,8 @@ Implementation details will be maintained in a separate repository.
 placeOrder(request){
   if(!isValidCustomer)
     return 'Invalid customer. Please login before creating new Order'
+
+  lockCart;
 
   if(!isAddressSelected)
     return 'Please select address'
