@@ -1,0 +1,287 @@
+# API Design for Food Delivery System
+
+## Cart Management
+
+- Add to cart
+  - api/v1/cart/addItem
+  - [itemInfo, customerId]
+  - 201 Created
+- View Cart
+  - api/v1/cart/view
+  - customerId
+  - 200 OK & Cart Content
+- Clear Cart
+  - api/v1/cart/clear
+  - customerId
+  - 204
+- Remove item from cart
+  - api/v1/cart/removeItem
+  - itemId, customerId
+  - 204
+- Update Quantity
+  - api/v1/cart/updateQuantity
+  - itemInfo, customerId
+  - 204
+
+## Restaurant Management
+
+- Register restaurant
+  - api/v1/restaurant/register
+  - restauratnInfo, userInfo
+  - 201
+- Enable restaurant
+  - api/v1/restaurant/enable
+  - restaurantId, userInformation
+  - 204
+- Disable restaurant
+  - api/v1/restaurant/disable
+  - restaurantId, userInformation
+  - 204
+- View all restaurants
+  - api/v1/restaurants/getAll
+  - no input
+  - 200
+- Search restaurant
+  - api/v1/restaurants/searchRestaurant
+  - searchText
+  - 200
+- Top rated restaurants
+  - api/v1/restaurant/topRated
+  - No input
+  - 200
+- Restaurant recommendations
+  - api/v1/restaurant/recommendations
+  - customerId
+  - 200
+
+## Restaurant Category Management
+
+- Add category
+  - api/v1/restaurantCategory/addNew
+  - categoryInfo, userId
+  - 201
+- Update category
+  - api/v1/restaurantCategory/update
+  - categoryInfo, userId
+  - 204
+- Disable category
+  - api/v1/restaurantCategory/disable
+  - categoryId, userId
+  - 204
+- Enable category
+  - api/v1/restaurantCategory/enable
+  - categoryId, userId
+  - 204
+- View all categories
+  - api/v1/restaurantCategory/getAll
+  - 200
+- View restaurants by category
+  - api/v1/restaurantCategory/getCategoryRestaurants
+  - categoryId
+  - 200
+
+## Menu Category Management
+
+- Add menu category
+  - api/v1/menuCategory/addNew
+  - menuCatInfo, userId
+  - 201
+- Update menu category
+  - api/v1/menuCategory/update
+  - menuCategoryInfo, userId
+  - 204
+- Disable menu category
+  - api/v1/menuCategory/disable
+  - categoryId, userId
+  - 204
+- Enable menu category
+  - api/v1/menuCategory/enable
+  - categoryId, userId
+  - 204
+- View all menu categories
+  - api/v1/menuCategory/getAll
+  - restaurantId
+  - 200
+- View all menu category items
+  - api/v1/menuCategory/getMenuCategoryItems
+  - menuCategoryId
+  - 200
+- View restaurants menu categories
+  - api/v1/menuCategories/getByRestaurant
+  - restaurantId
+  - 200
+
+## Menu Item Management
+
+- Add menu item
+  - api/v1/menueItem/addNew
+  - menuItemInfo, userId
+  - 201
+- Update menu item
+  - api/v1/menuItem/update
+  - menuItemInfo, userId
+  - 204
+- Disable menu item
+  - api/v1/menuItem/disable
+  - menuItemId, userId
+  - 204
+- Enable menu item
+  - api/v1/menuItem/enable
+  - menuItemId, userId
+  - 204
+- View menu item
+  - api/v1/menuItem/getById
+  - menuItemId
+  - 200
+- Search menu items
+  - api/v1/menuItem/search
+  - searchtext
+  - 200
+
+## Order Management
+
+- Place order (create new order)
+  - api/v1/order/placeOrder
+  - customerId, paymentInfo, address, phoneNumber
+  - 201
+- Update order status
+  - api/v1/order/updateStatus
+  - orderId, newStatus
+  - 204
+- Cancel order
+  - api/v1/order/cancel
+  - orderId
+  - 204
+- Cancelled orders by customer
+  - api/v1/order/cancelledByCustomer
+  - customerId
+  - 200
+- Cancelled orders by restaurant
+  - api/v1/order/cancelledByRestaurant
+  - restaurantId
+  - 200
+- Restaurant order history
+  - api/v1/order/historyByRestaurant
+  - restaurantId
+  - 200
+- Customer order history
+  - api/v1/order/historyByCustomer
+  - customerId
+  - 200
+- Order Summary
+  - api/v1/order/getSummary
+  - orderId
+  - 200
+- Order details
+  - api/v1/order/getDetails
+  - orderId
+  - 200
+- Active restaurant orders
+  - api/order/activeRestaurantOrders
+  - restaurantId
+  - 200
+- Active customer orders
+  - api/order/activeCustomerOrders
+  - customerId
+  - 200
+
+## User Registration & Auth
+
+- Sign up
+  - api/v1/user/signUp
+  - userInfo
+  - 201
+- Login
+  - api/v1/user/login
+  - userCredintials
+  - 200
+- Forget password
+  - api/v1/user/forgetPassword
+  - userInfo
+  - 202
+- Enable account
+  - api/v1/user/enable
+  - userId
+  - 204
+- Disable account
+  - api/v1/user/disable
+  - userId
+  - 204
+- Verify phone number
+  - api/v1/user/verifyPhoneNubmer
+  - userId, phoneNumber
+  - 202
+- Verify email
+  - api/v1/user/verifyEmail
+  - userId, email
+  - 202
+
+## Customer Management
+
+- Custoemr order history
+  - api/v1/customer/getOrderHistory
+  - customerId
+  - 200
+- Enable Account
+  - api/v1/customer/enableAccount
+  - customerId
+  - 204
+- Disable Account
+  - api/v1/customer/disableAccount
+  - customerId
+  - 204
+- Track order status
+  - api/v1/customer/getActiveOrders
+  - customerId
+  - 200
+- Add new address
+  - api/v1/customer/addAddress
+  - userId, addressInfo
+  - 201
+- Update Address
+  - api/v1/customer/updateAddress
+  - customerId, addressId, addressInfo
+  - 204
+- Delete Address
+  - api/v1/customer/deleteAddress
+  - customerId, addressId
+  - 204
+- Set default Address
+  - api/v1/customer/setDefaultAddress
+  - customerId, addressId
+  - 204
+
+## System Dashbord
+
+- Count restaurants
+  - api/v1/sysDashbord/countRestaurants
+  - dateUntill
+  - 200
+- Count customers
+  - api/v1/sysDashbord/countCustomers
+  - dateUntill
+  - 200
+- Count active Customers
+  - api/v1/sysDashbord/countActiveCustomers
+  - dateUntill
+  - 200
+- Daily orders count
+  - api/v1/sysDashbor/dailyOrdersCount
+  - date
+  - 200
+- Monthly orders count
+  - api/v1/sysDashbor/monthlyOrdersCount
+  - year, month
+  - 200
+- Orders within period
+  - api/v1/sysDashbord/getOrdersBetween
+  - startDate, endDate
+  - 200
+- Daily cancelled orders
+  - api/v1/sysDashbor/dailyCancelledOrdersCount
+  - date
+  - 200
+- Monthly cancelled orders
+  - api/v1/sysDashbor/monthlyCancelledOrdersCount
+  - year, month
+  - 200
