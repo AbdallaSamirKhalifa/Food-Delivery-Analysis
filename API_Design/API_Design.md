@@ -285,3 +285,64 @@
   - api/v1/sysDashbor/monthlyCancelledOrdersCount
   - year, month
   - 200
+- Daily transactions
+  - api/v1/sysDashbord/dailyTransactions
+  - date
+  - 200
+- Monthly Transactions
+  - api/v1/sysDashbord/monthlyTransactions
+  - year, month
+  - 200
+
+## System Reports
+
+- Daily transactions report
+  - api/v1/sysReports/dailyTransactions
+  - date
+  - 200
+- Monthly transactions report
+  - api/v1/sysReports/monthlyTransactions
+  - year, month
+  - 200
+
+## Restaurant Dashbord
+
+- Daily orders count
+  - api/v1/resDashbord/dailyOrdersCount
+  - restId, date
+  - 200
+- Today's Active Orders
+  - api/v1/resDashbord/activeOrders
+  - restId
+  - 200
+- Monthly total orders count
+  - api/v1/resDashbord/monthlyTotalOrdersCount
+  - restId, year, month
+  - 200
+- Daily cancelled orders
+  - api/v1/resDashbor/dailyCancelledOrders
+  - restId, date
+  - 200
+- Monthly cancelled orders
+  - api/v1/resDashbor/monthlyCancelledOrders
+  - restId, year, month
+  - 200
+- Daily transactions
+  - api/v1/resDashbord/dailyTransactions
+  - restId, date
+  - 200
+- Monthly transactions
+  - api/v1/resDashbord/monthlyTransactions
+  - restId, year, month
+  - 200
+
+## Restaurant Reports
+
+- Daily transactions report
+  - api/v1/sysReports/dailyTransactions
+  - restId, date
+  - 200
+- Monthly transactions report
+  - api/v1/sysReports/monthlyTransactions
+  - restId, year, month
+  - 200
